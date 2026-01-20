@@ -8,6 +8,7 @@ const manaImage = {
   alpha: "../images/α.jpeg",
   beta: "../images/β.jpeg",
   omega: "../images/Ω.jpeg",
+  volume: "../images/VOL.jpeg",
 };
 
 const manaBack = "mana_back.png";
@@ -34,7 +35,6 @@ function updateManaUI(type) {
 
   count.textContent = mana[type];
 
-  // 0 → 裏、1~5 → 表
   if (mana[type] === 0) {
     img.src = manaBack;
   } else {
