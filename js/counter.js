@@ -4,14 +4,13 @@ let mana = {
   omega: 0,
 };
 
-// 各魔力の表向き画像
 const manaImage = {
-  alpha: "mana_alpha.png",
-  beta: "mana_beta.png",
-  omega: "mana_omega.png",
+  alpha: "../images/α.jpeg",
+  beta: "../images/β.jpeg",
+  omega: "../images/Ω.jpeg",
 };
 
-const manaBack = "mana_back.png"; // 裏向き画像
+const manaBack = "mana_back.png";
 
 function addMana(type) {
   if (mana[type] >= 5) {
