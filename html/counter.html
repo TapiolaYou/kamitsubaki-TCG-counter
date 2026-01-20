@@ -1,46 +1,56 @@
 <!doctype html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
-
     <title>カウンター</title>
+
     <style>
       .mana-row {
         display: flex;
         align-items: center;
+        gap: 6px;
         margin-bottom: 10px;
       }
       .mana-img {
-        width: 60px;
-        height: 60px;
-        margin-right: 10px;
+        width: 50px;
+        height: 50px;
       }
     </style>
   </head>
+
   <body>
     <h2>魔力カウンター</h2>
 
     <div class="mana-row">
-      <img id="mana-alpha" class="mana-img" src="../images/α.jpeg" />
+      <img id="mana-alpha" class="mana-img" src="../images/nonMana.png" />
       <button onclick="addMana('alpha')">α +</button>
       <button onclick="removeMana('alpha')">α -</button>
       <span id="alpha-count">0</span>/5
+    </div>
 
-      <img id="mana-beta" class="mana-img" src="../images/β.jpeg" />
+    <div class="mana-row">
+      <img id="mana-beta" class="mana-img" src="../images/nonMana.png" />
       <button onclick="addMana('beta')">β +</button>
       <button onclick="removeMana('beta')">β -</button>
       <span id="beta-count">0</span>/5
+    </div>
 
-      <img id="mana-omega" class="mana-img" src="../images/Ω.jpeg" />
+    <div class="mana-row">
+      <img id="mana-omega" class="mana-img" src="../images/nonMana.png" />
       <button onclick="addMana('omega')">Ω +</button>
       <button onclick="removeMana('omega')">Ω -</button>
       <span id="omega-count">0</span>/5
-
-      <img id="volume" class="mana-img" src="../images/VOL.jpeg" />
-      <button onclick="addMana(`VOL`)">VOL +</button>
-      <button onclick="addMana(`VOL`)">VOL -</button>
-      <span id="volume-count">0</span>/10
     </div>
-    <script src="../js/counter.js" charaset="utf-8"></script>
+
+    <h2>VOL</h2>
+
+    <div class="mana-row">
+      <img id="vol-img" class="mana-img" src="../images/nonVol.png" />
+      <button onclick="addVol()">VOL +</button>
+      <button onclick="removeVol()">VOL -</button>
+      <span id="vol-count">0</span>/10
+    </div>
+
+    <script src="../js/counter.js" charset="utf-8"></script>
   </body>
 </html>
