@@ -14,7 +14,7 @@ const manaImage = {
 
 const manaBack = "../images/nonMana.png";
 const volImage = "../images/VOL.jpeg";
-const nonVol = "../images/nonVol.png";
+const nonVol = "../images/nonVOL.png";
 
 function addMana(type) {
   if (mana[type] >= 5) return;
