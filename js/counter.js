@@ -30,8 +30,8 @@ function removeMana(type) {
 }
 
 function updateManaUI(type) {
-  const img = document.getElementById(`mana-${type}`);
-  const count = document.getElementById(`${type}-count`);
+  const img = document.getElementById(`mana-${type} || volume`);
+  const count = document.getElementById(`${type}-count || volume-count`);
 
   count.textContent = mana[type];
 
