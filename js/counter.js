@@ -13,6 +13,7 @@ const manaImage = {
 };
 
 const manaBack = "mana_back.png";
+const nonVol = "../images/nonVol.png";
 
 function addMana(type) {
   if (mana[type] >= 5) {
