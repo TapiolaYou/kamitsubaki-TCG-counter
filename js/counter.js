@@ -2,6 +2,7 @@ let mana = {
   alpha: 0,
   beta: 0,
   omega: 0,
+  vol: 0,
 };
 
 const manaImage = {
@@ -34,10 +35,17 @@ function updateManaUI(type) {
   const count = document.getElementById(`${type}-count || volume-count`);
 
   count.textContent = mana[type];
+  count.textContent = volume;
 
   if (mana[type] === 0) {
     img.src = manaBack;
   } else {
     img.src = manaImage[type];
+  }
+
+  if (volume === 0) {
+    img.src = nonVol;
+  } else {
+    img.src = manaImage[volume];
   }
 }
