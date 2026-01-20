@@ -2,51 +2,56 @@ let mana = {
   alpha: 0,
   beta: 0,
   omega: 0,
-  vol: 0,
 };
+
+let vol = 0;
 
 const manaImage = {
   alpha: "../images/α.jpeg",
   beta: "../images/β.jpeg",
   omega: "../images/Ω.jpeg",
-  volume: "../images/VOL.jpeg",
 };
 
-const manaBack = "mana_back.png";
+const manaBack = "../images/nonMana.png";
+const volImage = "../images/VOL.jpeg";
 const nonVol = "../images/nonVol.png";
 
 function addMana(type) {
-  if (mana[type] >= 5) {
-    alert("これ以上生成できません（上限5）");
-    return;
-  }
+  if (mana[type] >= 5) return;
   mana[type]++;
   updateManaUI(type);
 }
 
 function removeMana(type) {
   if (mana[type] <= 0) return;
-
   mana[type]--;
   updateManaUI(type);
 }
 
 function updateManaUI(type) {
-  const img = document.getElementById(`mana-${type} || volume`);
-  const count = document.getElementById(`${type}-count || volume-count`);
+  const img = document.getElementById(`mana-${type}`);
+  const count = document.getElementById(`${type}-count`);
 
   count.textContent = mana[type];
-  count.textContent = volume;
+  img.src = mana[type] === 0 ? manaBack : manaImage[type];
+}
 
-  if (mana[type] === 0) {
-    img.src = manaBack;
-  } else {
-    img.src = manaImage[type];
-  }
+function addVol() {
+  if (vol >= 10) return;
+  vol++;
+  updateVolUI();
+}
 
-  if (volume === 0) {
-    img.src = nonVol;
-  } else {
-    img.src = manaImage[volume];
-  }
+function removeVol() {
+  if (vol <= 0) return;
+  vol--;
+  updateVolUI();
+}
+
+function updateVolUI() {
+  const img = document.getElementById("vol-img");
+  const count = document.getElementById("vol-count");
+
+  count.textContent = vol;
+  img.src = vol === 0 ? nonVol : volImage;
 }
