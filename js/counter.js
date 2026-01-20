@@ -13,9 +13,9 @@ const manaImage = {
 };
 
 const manaBack = {
-  αBack: "../images/nonα.png",
-  βBack: "../images/nonβ.png",
-  ΩBack: "../images/nonΩ.png",
+  alpha: "../images/nonα.png",
+  beta: "../images/nonβ.png",
+  omega: "../images/nonΩ.png",
 };
 
 volImage = "../images/VOL.jpeg";
