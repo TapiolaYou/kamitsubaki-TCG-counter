@@ -12,11 +12,14 @@ const manaImage = {
   omega: "../images/Ω.jpeg",
 };
 
-const αBack = "../images/nonα.png";
-const βBack = "../images/nonβ.png";
-const ΩBack = "../images/nonΩ.png";
-const volImage = "../images/VOL.jpeg";
-const nonVol = "../images/nonVOL.png";
+const manaBack = {
+  αBack: "../images/nonα.png",
+  βBack: "../images/nonβ.png",
+  ΩBack: "../images/nonΩ.png",
+};
+
+volImage = "../images/VOL.jpeg";
+nonVol = "../images/nonVOL.png";
 
 function addMana(type) {
   if (mana[type] >= 5) return;
@@ -35,7 +38,7 @@ function updateManaUI(type) {
   const count = document.getElementById(`${type}-count`);
 
   count.textContent = mana[type];
-  img.src = mana[type] === 0 ? manaBack : manaImage[type];
+  img.src = mana[type] === 0 ? manaBack[type] : manaImage[type];
 }
 
 function addVol() {
