@@ -12,7 +12,9 @@ const manaImage = {
   omega: "../images/Ω.jpeg",
 };
 
-const manaBack = "../images/nonα.png";
+const αBack = "../images/nonα.png";
+const βBack = "../images/nonβ.png";
+const ΩBack = "../images/nonΩ.png";
 const volImage = "../images/VOL.jpeg";
 const nonVol = "../images/nonVOL.png";
 
