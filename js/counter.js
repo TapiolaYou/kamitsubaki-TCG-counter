@@ -24,30 +24,45 @@ nonVol = "../images/nonVOL.png";
 function addMana(type) {
   if (mana[type] >= 5) return;
   mana[type]++;
-  updateManaUI(type);
+  updateManaColumn(type);
 }
 
 function removeMana(type) {
   if (mana[type] <= 0) return;
   mana[type]--;
-  updateManaUI(type);
-}
-
-function updateManaUI(type) {
-  const img = document.getElementById(`mana-${type}`);
-  const count = document.getElementById(`${type}-count`);
-
-  count.textContent = mana[type];
-  img.src = mana[type] === 0 ? manaBack[type] : manaImage[type];
+  updateManaColumn(type);
 }
 
 function updateManaColumn(type) {
   const col = document.getElementById(`${type}-col`);
   const imgs = col.querySelectorAll("img");
 
-  imgs.forEach((img, index) => {
-    img.src = index < mana[type] ? manaImage[type] : manaBack[type];
+  imgs.forEach((img, i) => {
+    img.src = i < mana[type] ? manaImage[type] : manaBack[type];
   });
+}
+
+function initColumn(type) {
+  const col = document.getElementById(`${type}-col`);
+  const imgs = col.querySelectorAll("img");
+
+  imgs.forEach((img, i) => {
+    img.src = manaBack[type];
+    img.dataset.index = i + 1;
+
+    img.onclick = () => {
+      toggleMana(type, i + 1);
+    };
+  });
+}
+
+function toggleMana(type, index) {
+  if (mana[type] === index) {
+    mana[type] = index - 1;
+  } else {
+    mana[type] = index;
+  }
+  updateManaColumn(type);
 }
 
 function addVol() {
@@ -69,3 +84,7 @@ function updateVolUI() {
   count.textContent = vol;
   img.src = vol === 0 ? nonVol : volImage;
 }
+
+["alpha", "beta", "omega"].forEach((type) => {
+  initColumn(type);
+});
