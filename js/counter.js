@@ -21,18 +21,6 @@ const manaBack = {
 volImage = "../images/VOL.jpeg";
 nonVol = "../images/nonVOL.png";
 
-function addMana(type) {
-  if (mana[type] >= 5) return;
-  mana[type]++;
-  updateManaColumn(type);
-}
-
-function removeMana(type) {
-  if (mana[type] <= 0) return;
-  mana[type]--;
-  updateManaColumn(type);
-}
-
 function updateManaColumn(type) {
   const col = document.getElementById(`${type}-col`);
   const imgs = col.querySelectorAll("img");
