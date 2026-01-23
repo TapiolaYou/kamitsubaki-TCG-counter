@@ -6,6 +6,9 @@ let mana = {
 
 let vol = 0;
 
+const volImage = "../images/VOL.jpeg";
+const nonVol = "../images/nonVol.png";
+
 const manaImage = {
   alpha: "../images/α.jpeg",
   beta: "../images/β.jpeg",
@@ -76,3 +79,32 @@ function updateVolUI() {
 ["alpha", "beta", "omega"].forEach((type) => {
   initColumn(type);
 });
+
+function initVol() {
+  const grid = document.getElementById("vol-grid");
+  const imgs = grid.querySelectorAll("img");
+
+  imgs.forEach((img, i) => {
+    img.src = nonVol;
+    img.dataset.index = i + 1;
+  });
+}
+
+function toggleVol(index) {
+  if (vol === index) {
+    vol = index - 1;
+  } else {
+    vol = index;
+  }
+  updateVolUI();
+}
+
+function updateVolUI() {
+  const imgs = document.getElementById("vol-grid").querySelectorAll("img");
+
+  imgs.forEach((img, i) => {
+    img.src = i < vol ? volImage : nonVol;
+  });
+}
+
+initVol();
