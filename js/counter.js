@@ -7,7 +7,7 @@ let mana = {
 let vol = 0;
 
 const volImage = "../images/VOL.jpeg";
-const nonVol = "../images/nonVol.png";
+const nonVol = "../images/nonVOL.png";
 
 const manaImage = {
   alpha: "../images/α.jpeg",
