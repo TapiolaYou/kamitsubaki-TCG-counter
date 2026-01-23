@@ -37,49 +37,58 @@
         height: 40px;
         cursor: pointer;
       }
+
+      .counter-wrap {
+        display: flex;
+        grid-template-columns: auto auto;
+        gap: 20px;
+        align-items: start;
+      }
     </style>
   </head>
 
   <body>
     <h2>魔力カウンター</h2>
 
-    <div class="mana-grid">
-      <div class="mana-col" id="alpha-col">
+    <div class="counter-wrap">
+      <div class="mana-grid">
+        <div class="mana-col" id="alpha-col">
+          <img data-index="1" />
+          <img data-index="2" />
+          <img data-index="3" />
+          <img data-index="4" />
+          <img data-index="5" />
+        </div>
+
+        <div class="mana-col" id="beta-col">
+          <img data-index="1" />
+          <img data-index="2" />
+          <img data-index="3" />
+          <img data-index="4" />
+          <img data-index="5" />
+        </div>
+
+        <div class="mana-col" id="omega-col">
+          <img data-index="1" />
+          <img data-index="2" />
+          <img data-index="3" />
+          <img data-index="4" />
+          <img data-index="5" />
+        </div>
+      </div>
+
+      <div class="vol-grid" id="vol-grid">
         <img data-index="1" />
         <img data-index="2" />
         <img data-index="3" />
         <img data-index="4" />
         <img data-index="5" />
+        <img data-index="6" />
+        <img data-index="7" />
+        <img data-index="8" />
+        <img data-index="9" />
+        <img data-index="10" />
       </div>
-
-      <div class="mana-col" id="beta-col">
-        <img data-index="1" />
-        <img data-index="2" />
-        <img data-index="3" />
-        <img data-index="4" />
-        <img data-index="5" />
-      </div>
-
-      <div class="mana-col" id="omega-col">
-        <img data-index="1" />
-        <img data-index="2" />
-        <img data-index="3" />
-        <img data-index="4" />
-        <img data-index="5" />
-      </div>
-    </div>
-
-    <div class="vol-grid" id="vol-grid">
-      <img data-index="1" />
-      <img data-index="2" />
-      <img data-index="3" />
-      <img data-index="4" />
-      <img data-index="5" />
-      <img data-index="6" />
-      <img data-index="7" />
-      <img data-index="8" />
-      <img data-index="9" />
-      <img data-index="10" />
     </div>
     <script src="../js/counter.js" charset="utf-8"></script>
   </body>
