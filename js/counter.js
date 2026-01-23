@@ -41,6 +41,15 @@ function updateManaUI(type) {
   img.src = mana[type] === 0 ? manaBack[type] : manaImage[type];
 }
 
+function updateManaColumn(type) {
+  const col = document.getElementById(`${type}-col`);
+  const imgs = col.querySelectorAll("img");
+
+  imgs.forEach((img, index) => {
+    img.src = index < mana[type] ? manaImage[type] : manaBack[type];
+  });
+}
+
 function addVol() {
   if (vol >= 10) return;
   vol++;
