@@ -21,9 +21,6 @@ const manaBack = {
   omega: "../images/nonΩ.png",
 };
 
-volImage = "../images/VOL.jpeg";
-nonVol = "../images/nonVOL.png";
-
 function updateManaColumn(type) {
   const col = document.getElementById(`${type}-col`);
   const imgs = col.querySelectorAll("img");
@@ -66,14 +63,6 @@ function removeVol() {
   if (vol <= 0) return;
   vol--;
   updateVolUI();
-}
-
-function updateVolUI() {
-  const img = document.getElementById("vol-img");
-  const count = document.getElementById("vol-count");
-
-  count.textContent = vol;
-  img.src = vol === 0 ? nonVol : volImage;
 }
 
 ["alpha", "beta", "omega"].forEach((type) => {
