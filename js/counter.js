@@ -101,13 +101,3 @@ function updateVolUI() {
 }
 
 initVol();
-
-function toggleVol(index) {
-  console.log("VOL clicked:", index);
-  if (vol === index) {
-    vol = index - 1;
-  } else {
-    vol = index;
-  }
-  updateVolUI();
-}
