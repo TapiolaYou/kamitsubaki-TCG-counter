@@ -15,6 +15,22 @@
         width: 50px;
         height: 50px;
       }
+
+      .mana-grid {
+        display: flex;
+        gap: 10px;
+      }
+
+      .mana-col {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .mana-col img {
+        width: 40px;
+        height: 40px;
+      }
     </style>
   </head>
 
@@ -41,6 +57,41 @@
       <button onclick="addVol()">VOL +</button>
       <button onclick="removeVol()">VOL -</button>
       <span id="vol-count">0</span>/10
+    </div>
+
+    <div class="mana-grid">
+      <div class="mana-col" id="alpha-col">
+        <img src="../images/nonα.png" />
+        <img src="../images/nonα.png" />
+        <img src="../images/nonα.png" />
+        <img src="../images/nonα.png" />
+        <img src="../images/nonα.png" />
+      </div>
+
+      <div class="mana-col" id="beta-col">
+        <img src="../images/nonβ.png" />
+        <img src="../images/nonβ.png" />
+        <img src="../images/nonβ.png" />
+        <img src="../images/nonβ.png" />
+        <img src="../images/nonβ.png" />
+      </div>
+
+      <div class="mana-col" id="omega-col">
+        <img src="../images/nonΩ.png" />
+        <img src="../images/nonΩ.png" />
+        <img src="../images/nonΩ.png" />
+        <img src="../images/nonΩ.png" />
+        <img src="../images/nonΩ.png" />
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="addMana('alpha')">α+</button>
+      <button onclick="removeMana('alpha')">α-</button>
+      <button onclick="addMana('beta')">β+</button>
+      <button onclick="removeMana('beta')">β-</button>
+      <button onclick="addMana('omega')">Ω+</button>
+      <button onclick="removeMana('omega')">Ω-</button>
     </div>
 
     <script src="../js/counter.js" charset="utf-8"></script>
