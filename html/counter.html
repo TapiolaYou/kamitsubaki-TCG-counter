@@ -25,6 +25,18 @@
         width: 40px;
         height: 40px;
       }
+
+      .vol-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 40px);
+        gap: 6px;
+      }
+
+      .vol-grid img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
     </style>
   </head>
 
@@ -55,6 +67,19 @@
         <img data-index="4" />
         <img data-index="5" />
       </div>
+    </div>
+
+    <div class="vol-grid" id="vol-grid">
+      <img data-index="1" />
+      <img data-index="2" />
+      <img data-index="3" />
+      <img data-index="4" />
+      <img data-index="5" />
+      <img data-index="6" />
+      <img data-index="7" />
+      <img data-index="8" />
+      <img data-index="9" />
+      <img data-index="10" />
     </div>
     <script src="../js/counter.js" charset="utf-8"></script>
   </body>
