@@ -76,6 +76,10 @@ function initVol() {
   imgs.forEach((img, i) => {
     img.src = nonVol;
     img.dataset.index = i + 1;
+
+    img.onclick = () => {
+      toggleVol(i + 1);
+    };
   });
 }
 
