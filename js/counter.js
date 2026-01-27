@@ -112,23 +112,14 @@ wrapper.addEventListener("touchstart", (e) => {
 });
 
 wrapper.addEventListener("touchend", (e) => {
-  const endX = e.changedTouches[0].clientX;
-  const diff = endX - startX;
+  const diff = e.changedTouches[0].clientX - startX;
 
   if (Math.abs(diff) < 50) return;
 
-  if (diff < 0 && currentPage === 0) {
-    currentPage = 1;
-  } else if (diff > 0 && currentPage === 1) {
-    currentPage = 0;
-  }
-
-  updatePage();
-});
-
-function updatePage() {
+  if (diff < 0) currentPage = 1;
+  if (diff > 0) currentPage = 0;
   wrapper.style.transform = `translateX(-${currentPage * 100}vw)`;
-}
+});
 
 function Mobile() {
   return window.innerWidth < 768;
