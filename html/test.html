@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8" />
+    <title>カウンター</title>
+    <style>
+      .mana-img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .mana-grid {
+        display: flex;
+        gap: 10px;
+      }
+
+      .mana-col {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .mana-col img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .vol-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 40px);
+        gap: 6px;
+      }
+
+      .vol-grid img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .counter-wrap {
+        display: flex;
+        grid-template-columns: auto auto;
+        gap: 20px;
+        align-items: start;
+      }
+
+      .vol-grid img,
+      .mana-col img {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      #counter-wrapper {
+        display: flex;
+        width: 200vw;
+        transition: transform 0.3s ease;
+      }
+
+      .page {
+        width: 100vw;
+        padding: 10px;
+      }
+
+      @media (min-width: 768px) {
+        #counter-wrapper {
+          width: 100%;
+          transform: none !important;
+        }
+
+        .page {
+          width: auto;
+          touch-action: pan-y;
+        }
+      }
+    </style>
+  </head>
+<body>
+<h2>魔力カウンター</h2>
+<div id="counter-wrapper">
+  <div class="page" id="mana-page">
+    <h3>魔力</h3>
+    <div class="mana-grid">
+      <div class="mana-col" id="alpha-col">
+        <img /><img /><img /><img /><img />
+      </div>
+      <div class="mana-col" id="beta-col">
+        <img /><img /><img /><img /><img />
+      </div>
+      <div class="mana-col" id="omega-col">
+        <img /><img /><img /><img /><img />
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="vol-page">
+    <h3>VOL</h3>
+    <div class="vol-grid" id="vol-grid">
+      <img /><img /><img /><img /><img />
+      <img /><img /><img /><img /><img />
+    </div>
+  </div>
+</div>
+
+<script src="../js/counter.js" charset="utf-8"></script>
+</body>
+</html>
