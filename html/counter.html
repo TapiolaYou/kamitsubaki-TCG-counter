@@ -1,9 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
+<meta charset="utf-8" />
     <title>カウンター</title>
-
     <style>
       .mana-img {
         width: 50px;
@@ -73,54 +71,33 @@
       }
     </style>
   </head>
-
-  <body>
-    <h2>魔力カウンター</h2>
+<body>
+<h2>魔力カウンター</h2>
+<div id="counter-wrapper">
+  <div class="page" id="mana-page">
     <h3>魔力</h3>
-    <div class="counter-wrapper">
-      <div class="page" id="mana-page">
-        <div class="mana-grid">
-          <div class="mana-col" id="alpha-col">
-            <img data-index="1" />
-            <img data-index="2" />
-            <img data-index="3" />
-            <img data-index="4" />
-            <img data-index="5" />
-          </div>
-
-          <div class="mana-col" id="beta-col">
-            <img data-index="1" />
-            <img data-index="2" />
-            <img data-index="3" />
-            <img data-index="4" />
-            <img data-index="5" />
-          </div>
-
-          <div class="mana-col" id="omega-col">
-            <img data-index="1" />
-            <img data-index="2" />
-            <img data-index="3" />
-            <img data-index="4" />
-            <img data-index="5" />
-          </div>
-        </div>
+    <div class="mana-grid">
+      <div class="mana-col" id="alpha-col">
+        <img /><img /><img /><img /><img />
       </div>
-
-      <div class="vol-grid" id="vol-grid">
-        <div class="page" id="vol-page">
-          <img data-index="1" />
-          <img data-index="2" />
-          <img data-index="3" />
-          <img data-index="4" />
-          <img data-index="5" />
-          <img data-index="6" />
-          <img data-index="7" />
-          <img data-index="8" />
-          <img data-index="9" />
-          <img data-index="10" />
-        </div>
+      <div class="mana-col" id="beta-col">
+        <img /><img /><img /><img /><img />
+      </div>
+      <div class="mana-col" id="omega-col">
+        <img /><img /><img /><img /><img />
       </div>
     </div>
-    <script src="../js/counter.js" charset="utf-8"></script>
-  </body>
+  </div>
+
+  <div class="page" id="vol-page">
+    <h3>VOL</h3>
+    <div class="vol-grid" id="vol-grid">
+      <img /><img /><img /><img /><img />
+      <img /><img /><img /><img /><img />
+    </div>
+  </div>
+</div>
+
+<script src="../js/counter.js" charset="utf-8"></script>
+</body>
 </html>
