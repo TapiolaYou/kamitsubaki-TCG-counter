@@ -6,6 +6,11 @@ let mana = {
 
 let vol = 0;
 
+let currentPage = 0;
+let startX = 0;
+
+const wrapper = document.getElementById("counter-wrapper");
+
 const volImage = "../images/VOL.jpeg";
 const nonVol = "../images/nonVOL.png";
 
@@ -101,3 +106,30 @@ function updateVolUI() {
 }
 
 initVol();
+
+wrapper.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+wrapper.addEventListener("touchend", (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const diff = endX - startX;
+
+  if (Math.abs(diff) < 50) return;
+
+  if (diff < 0 && currentPage === 0) {
+    currentPage = 1;
+  } else if (diff > 0 && currentPage === 1) {
+    currentPage = 0;
+  }
+
+  updatePage();
+});
+
+function updatePage() {
+  wrapper.style.transform = `translateX(-${currentPage * 100}vw)`;
+}
+
+function Mobile() {
+  return window.innerWidth < 768;
+}
