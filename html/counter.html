@@ -48,6 +48,28 @@
       .mana-col img {
         -webkit-tap-highlight-color: transparent;
       }
+
+      #counter-wrapper {
+        display: flex;
+        width: 200vw;
+        transition: transform 0.3s ease;
+      }
+
+      .page {
+        width: 100vw;
+        padding: 10px;
+      }
+
+      @media (min-width: 768px) {
+        #page-wrapper {
+          width: 100%;
+          transform: none !important;
+        }
+
+        .page {
+          width: auto;
+        }
+      }
     </style>
   </head>
 
@@ -55,43 +77,47 @@
     <h2>魔力カウンター</h2>
 
     <div class="counter-wrap">
-      <div class="mana-grid">
-        <div class="mana-col" id="alpha-col">
-          <img data-index="1" />
-          <img data-index="2" />
-          <img data-index="3" />
-          <img data-index="4" />
-          <img data-index="5" />
-        </div>
+      <div class="page" id="mana-page">
+        <div class="mana-grid">
+          <div class="mana-col" id="alpha-col">
+            <img data-index="1" />
+            <img data-index="2" />
+            <img data-index="3" />
+            <img data-index="4" />
+            <img data-index="5" />
+          </div>
 
-        <div class="mana-col" id="beta-col">
-          <img data-index="1" />
-          <img data-index="2" />
-          <img data-index="3" />
-          <img data-index="4" />
-          <img data-index="5" />
-        </div>
+          <div class="mana-col" id="beta-col">
+            <img data-index="1" />
+            <img data-index="2" />
+            <img data-index="3" />
+            <img data-index="4" />
+            <img data-index="5" />
+          </div>
 
-        <div class="mana-col" id="omega-col">
-          <img data-index="1" />
-          <img data-index="2" />
-          <img data-index="3" />
-          <img data-index="4" />
-          <img data-index="5" />
+          <div class="mana-col" id="omega-col">
+            <img data-index="1" />
+            <img data-index="2" />
+            <img data-index="3" />
+            <img data-index="4" />
+            <img data-index="5" />
+          </div>
         </div>
       </div>
 
       <div class="vol-grid" id="vol-grid">
-        <img data-index="1" />
-        <img data-index="2" />
-        <img data-index="3" />
-        <img data-index="4" />
-        <img data-index="5" />
-        <img data-index="6" />
-        <img data-index="7" />
-        <img data-index="8" />
-        <img data-index="9" />
-        <img data-index="10" />
+        <div class="page" id="vol-page">
+          <img data-index="1" />
+          <img data-index="2" />
+          <img data-index="3" />
+          <img data-index="4" />
+          <img data-index="5" />
+          <img data-index="6" />
+          <img data-index="7" />
+          <img data-index="8" />
+          <img data-index="9" />
+          <img data-index="10" />
+        </div>
       </div>
     </div>
     <script src="../js/counter.js" charset="utf-8"></script>
